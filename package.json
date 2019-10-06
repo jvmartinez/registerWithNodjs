@@ -1,0 +1,15 @@
+{
+  "name": "registry",
+  "version": "1.0.0",
+  "description": "Registration system example",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "author": "Juan Martinez",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-promise-router": "^3.0.3"
+  }
+}
