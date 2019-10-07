@@ -3,7 +3,28 @@
  */
 'use strict'
 
+const mongo =  require("../core/storeRemote.js")
 var modelUser = {}
+
+let userSchema = {
+    name: {
+        type: String,
+        trim: true
+    },
+    last_name: {
+        type: String,     
+        trim: true
+    },
+    address1: {
+        type: String,
+        trim: true
+    },
+    email: {
+        type: String,
+        trim: true
+    }
+}
+
 /**
  * Struct for mongo or mysql
  * @param data value request.body || Array
@@ -44,4 +65,6 @@ modelUser.validate = (data) => {
     return status    
 } 
 
-module.exports = modelUser
+let user = mongo.createdNewSchema('user', userSchema)
+
+module.exports = {modelUser, user}
