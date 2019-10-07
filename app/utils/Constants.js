@@ -2,8 +2,7 @@
  * @author Juan Martinez
  */
 'use strict'
-var constants = {}
-constants.PORT =  process.env.PORT || 3000
+const mongo = 'mongodb://localhost:27017/sign_up'
 
-module.exports = constants
+module.exports = {mongo}
 
